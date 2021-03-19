@@ -273,7 +273,7 @@ def load_photo():
             <label for="photo">Приложите фотографию</label> <br>
             <input type="file" class="form-control-file" id="photo" name="file"> <br> <br>
 
-            <img src="{url_for('static', filename='img/image.png')}" alt="Изображение не загружено"> <br> <br>
+            <img src="image.png" alt="Изображение не загружено"> <br> <br>
 
             <button type="submit" class="btn btn-primary">Отправить</button>
         </form>
@@ -283,7 +283,7 @@ def load_photo():
 
     elif request.method == 'POST':
         f = request.files['file']
-        f.save('static/img/image.png')
+        f.save('image.png')
         return "Форма отправлена. Перезайдите на сайт, чтобы увидеть вашу фотографию"
 
 
